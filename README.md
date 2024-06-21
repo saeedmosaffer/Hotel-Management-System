@@ -80,6 +80,7 @@ mvn clean install
 java -jar target/project2-hotel-management-system-0.0.1-SNAPSHOT.jar
 
 Docker Image:
+https://hub.docker.com/repository/docker/saeedmosaffer/project2hotel-management-system/general
 
 Build Docker Image: docker build -t saeedmosaffer/project2-hotel-management-system
 
