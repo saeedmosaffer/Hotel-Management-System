@@ -58,14 +58,22 @@ Run Docker Container: docker run -p 8080:8080 saeedmosaffer/project2-hotel-manag
 
 DockerHub Repository: 
 
-What We Learned:
+What I Learned:
+
 Spring Boot: Understanding the fundamentals of Spring Boot for building RESTful APIs.
+
 JWT Authentication: Implementing JWT for secure API access.
+
 API Versioning: Utilizing different strategies for API versioning (URI, Request Parameter, Accept Header).
+
 Database Management: Designing and implementing entity relationships using JPA.
+
 Docker: Containerizing the application for consistent deployment.
+
 Exception Handling and Validation: Ensuring robust API responses and input validation.
+
 OAS 3.1.0: Documenting APIs using OpenAPI Specification for clarity and maintainability.
+
 Role-Based Access Control: Differentiating access levels for admin and customer roles.
 
 
