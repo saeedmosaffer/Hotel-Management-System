@@ -2,58 +2,82 @@ Hotel Management System
 
 The Hotel Management System is designed to streamline operations for both hotel employees and guests. It offers functionalities for customers to search available rooms, make reservations, check-in, check-out, and generate invoices. Employees can manage room availability, maintain customer profiles, oversee housekeeping schedules, and manage billing. The system uses Spring Boot to provide a set of RESTful APIs to support web and mobile interfaces.
 
-Resources
+Resources:
+
 Customer Management
 
 Register: Allows new users to register.
+
 Login: Authenticates users and provides a JWT for secure access.
+
 Profile Management: Enables users to view and update their profiles and change passwords.
-Employee Management
+
+Employee Management:
 
 Admin Functions: Admins can manage hotel employees and staff.
+
 Search Functionality
 
 Reservations: Search for reservations by customer name, ID, and date.
+
 Customer Info: Search for customer information.
+
 Room Availability: Check room availability with details like price, facilities, capacity, size, and features.
+
 Reservation Management
 
 Booking: Allows customers to book rooms.
+
 Modification and Cancellation: Customers can modify and request cancellations (admin approval required).
-Room Management
+
+Room Management:
 
 Room Types and Status: Admins can manage room types, availability, and status.
+
 Check-In/Check-Out
 
 Customer Management: Admins manage the arrival and departure processes.
-Housekeeping Management
+
+Housekeeping Management:
 
 Scheduling and Tracking: Manage housekeeping tasks and schedules.
-Billing Functionality
+
+Billing Functionality:
 
 Invoice Management: Generate and manage invoices for customer reservations.
 
 ER Diagram
 
-How to Build, Package, and Run the Application
+How to Build, Package, and Run the Application:
+
 Prerequisites
+
 Java 11 or higher
+
 Maven 3.6+
+
 Docker (for building Docker images)
 
 Building the Application
+
 1. Clone the repository:
+
 git clone https://github.com/saeedmosaffer/project2-hotel-management-system.git
+
 cd hotel-management-system
 
 2. Build with Maven:
+
 mvn clean install
 
 3. Run the Application:
+   
 java -jar target/project2-hotel-management-system-0.0.1-SNAPSHOT.jar
 
 Docker Image:
+
 Build Docker Image: docker build -t saeedmosaffer/project2-hotel-management-system
+
 Run Docker Container: docker run -p 8080:8080 saeedmosaffer/project2-hotel-management-system
 
 DockerHub Repository: 
