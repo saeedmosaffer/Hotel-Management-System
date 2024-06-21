@@ -57,9 +57,9 @@ How to Build, Package, and Run the Application:
 
 Prerequisites
 
-Java 11 or higher
+Java SDK 17
 
-Maven 3.6+
+Maven
 
 Docker (for building Docker images)
 
