@@ -46,7 +46,12 @@ Billing Functionality:
 
 Invoice Management: Generate and manage invoices for customer reservations.
 
-ER Diagram
+Class Diadram: 
+![image](https://github.com/saeedmosaffer/project2-hotel-management-system/assets/132621749/dd25b4c4-b326-4d40-be23-35edc6f69e52)
+
+ER Diagram:
+![image](https://github.com/saeedmosaffer/project2-hotel-management-system/assets/132621749/b7c13ad9-12aa-4866-9346-0a2610d38519)
+
 
 How to Build, Package, and Run the Application:
 
