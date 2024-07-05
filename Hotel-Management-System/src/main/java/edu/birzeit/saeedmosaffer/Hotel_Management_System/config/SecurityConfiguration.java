@@ -39,7 +39,10 @@ public class SecurityConfiguration {
               .authorizeHttpRequests(auth -> auth
                       .requestMatchers("/api/v1/auth/**","/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/v1/users/**").hasAnyAuthority(ADMIN.name())
+                        .requestMatchers(HttpMethod.GET, "/v1/users").hasAnyAuthority(ADMIN.name())
                         .requestMatchers(HttpMethod.GET, "/api/v1/rooms").hasAnyAuthority(CUSTOMER.name(), ADMIN.name())
+                        .requestMatchers(HttpMethod.GET, "/api/v1/reservations").hasAnyAuthority(CUSTOMER.name(), ADMIN.name())
+                        .requestMatchers(HttpMethod.GET, "/api/v1/invoices").hasAnyAuthority(CUSTOMER.name(), ADMIN.name())
 
 
                       .anyRequest().authenticated())

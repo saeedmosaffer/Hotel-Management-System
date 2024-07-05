@@ -28,36 +28,6 @@ public class AuthenticationService {
   private final JwtService jwtService;
   private final AuthenticationManager authenticationManager;
 
-//  public AuthenticationResponse register(RegisterRequest request) {
-//    // give me the correct code here and i dont have a DTO to customer so give me the correct code
-//    var customerDto = CustomerDto.builder()
-//        .firstname(request.getFirstname())
-//        .lastname(request.getLastname())
-//        .email(request.getEmail())
-//        .build();
-//
-//
-//
-//    var customer= customerService.createCustomer(customerDto);
-//
-//    var user = User.builder()
-//        .firstname(request.getFirstname())
-//        .lastname(request.getLastname())
-//        .email(request.getEmail())
-//        .password(passwordEncoder.encode(request.getPassword()))
-//        .customerId(customer.getId())
-//        .role(Role.CUSTOMER)
-//        .build();
-//    var savedUser = repository.save(user);
-//    var jwtToken = jwtService.generateToken(user);
-//    var refreshToken = jwtService.generateRefreshToken(user);
-//    saveUserToken(savedUser, jwtToken);
-//    return AuthenticationResponse.builder()
-//        .accessToken(jwtToken)
-//            .refreshToken(refreshToken)
-//        .build();
-//  }
-
   public AuthenticationResponse  authenticate(AuthenticationRequest request) {
     String email=request.getEmail();
     System.out.println("email:"+email);

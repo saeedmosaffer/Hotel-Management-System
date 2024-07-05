@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_here
+      MYSQL_DATABASE: hotel-management-system
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - "3308:3306"
+    networks:
+      - backend
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spring-app
+    image: spring-app
+    ports:
+      - "8081:8080"
+    networks:
+      - backend
+    environment:
+      SPRING_APPLICATION_NAME: Hotel-Management-System
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/hotel-management-system?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root_password_here
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
+      APPLICATION_SECURITY_JWT_SECRET_KEY: MySuperSecretKey123MySuperSecretKey123MySuperSecretKey123MySuperSecretKey123MySuperSecretKey123MySuperSecretKey123MySuperSecretKey123MySuperSecretKey123
+      APPLICATION_SECURITY_JWT_EXPIRATION: 8640000
+      APPLICATION_SECURITY_JWT_REFRESH_TOKEN_EXPIRATION: 6048000
+    restart: unless-stopped
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mysql:
