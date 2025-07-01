@@ -55,7 +55,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
 		</dependency>
 		<!-- Spring Boot Starter Data JPA -->
 		<dependency>
@@ -87,7 +86,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
 		</dependency>
 
 		<!-- Springdoc OpenAPI Starter WebMvc UI -->
